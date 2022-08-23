@@ -2,7 +2,7 @@
 ---
 @font-face {
        font-family: "Glyphicons Halflings";
-       src: url("fonts/glyphicons-halflings-regular.ttf"); 
+       src: url("fonts/glyphicons-halflings-regular.ttf");
 }
 
 * {
@@ -33,7 +33,7 @@
 body,
 html {
        margin: 0;
-       overflow-x: hidden;
+
 }
 
 .nav {
@@ -50,7 +50,8 @@ header {
        align-items: baseline;
        display: flex;
        justify-content: space-between;
-       #home{
+
+       #home {
               font-family: serif;
               font-style: italic;
        }
@@ -58,12 +59,11 @@ header {
 
 .container {
        width: 80%;
-       overflow: hidden;
        margin-left: 10%;
 }
 
 .image-container {
-       margin-top: 50px;
+       margin-top: 100px;
        width: 100%;
        border-radius: 5px;
        height: 350px;
@@ -214,25 +214,49 @@ header {
 }
 
 footer {
-
-
-       width: 100%;
+       color: white;
+       margin-top: 100px;
+       background-color: rgb(171, 86, 214);
        align-items: baseline;
        display: flex;
-       justify-content: space-between;
+       // box-shadow: -30px -30px black;
+       justify-content: center;
+       text-align: center;
        height: 200px;
+
+       h1 {
+              margin-top: 40px;
+              font-size: 50px;
+              font-family: serif;
+              font-style: italic;
+       }
 }
 
-.footer-color {
+.contacts {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       margin-top: 100px;
+       align-items: center;
 
-       background: linear-gradient(0deg, #5ad142b7 0%, #95f18ea7 35%, rgba(60, 131, 50, 0.664) 100%),
-              url("/assets/images/garden2.jpg");
-       background-position: 0 70%;
-       color: white;
+       .means {
+              display: flex;
+              gap: 15px;
+              .contact-card{
+                     display: flex;
+                     flex-direction: column;
+                     align-items: center;
+                     img{
+                            aspect-ratio: 1/1;
+                            width: 100px;
+                     }
+              }
+       }
 }
 
 .info-banner {
-       width: 100%;
+       box-shadow: 0 0 0 100vmax rgba(23, 23, 43, 0.737);
+       clip-path: inset(0 -100vmax);
        display: flex;
        justify-content: center;
        background-color: rgba(23, 23, 43, 0.737);
@@ -265,24 +289,46 @@ footer {
        .nav {
               font-size: 15px !important;
        }
-       #home{
+
+       #home {
               font-size: 20px !important;
        }
 
-              .chi-sono {
-                     flex-direction: column !important;
-                     justify-content: center !important;
-                     gap: 0px !important;
-                     align-items: center!important;
-                     .about{
-                            width: 100%;
-                            padding: 0;
-                     }
-                     .profile-img{
-                
-                            width:300px !important;
-                     }
+       .chi-sono {
+              flex-direction: column !important;
+              justify-content: center !important;
+              gap: 0px !important;
+              align-items: center !important;
+
+              .about {
+                     width: 100%;
+                     padding: 0;
               }
+
+              .profile-img {
+
+                     width: 300px !important;
+              }
+       }
+
+       .carousel-inner>.item>a>img,
+       .carousel-inner>.item>img,
+       .img-responsive,
+       .thumbnail a>img,
+       .thumbnail>img {
+              display: block;
+              max-height: 300px !important;
+              min-height: 300px !important;
+              object-fit: contain;
+
+       }
+
+       .carousel-inner {
+              position: relative;
+              width: 100%;
+              height: 300px !important;
+              overflow: hidden;
+       }
 }
 
 .banner-chisiamo {
@@ -290,9 +336,7 @@ footer {
        width: 80%;
        margin-left: 10%;
 
-
-
-       img {
+       margin img {
               border-radius: 10px;
               width: 30%;
               min-width: 300px;
@@ -539,16 +583,19 @@ footer {
 }
 
 .chi-sono {
+       margin-top: 150px;
        display: flex;
        flex-direction: row;
        justify-content: center;
-       gap: 30px;
+       gap: 50px;
 }
 
 .profile-img {
-       border-radius: 50%;
+       // border-radius: 50%;
+       box-shadow: 30px -30px darkorchid;
        width: 400px;
-       aspect-ratio: 9/16;
+       aspect-ratio: 12/16;
+       object-fit: cover;
 }
 
 .about {
@@ -557,16 +604,20 @@ footer {
        width: 50%;
        height: inherit;
        color: black;
-       padding-top: 150px;
+       padding-top: 120px;
        text-shadow: none;
 
        h1 {
-       text-align: center;
+              text-align: center;
               font-size: 45px;
+              font-family: serif;
+              font-style: italic;
+              margin-bottom: 10px;
+              color: rgb(106, 36, 141);
        }
 
        p {
-       text-align: justify;
+              text-align: justify;
               font-size: 22px;
        }
 }
@@ -577,9 +628,10 @@ footer {
 .thumbnail a>img,
 .thumbnail>img {
        display: block;
-       max-width: 100%;
-       height: 100%;
-       
+       max-height: 600px;
+       min-height: 600px;
+       object-fit: contain;
+
 }
 
 .carousel {
@@ -589,8 +641,7 @@ footer {
 .carousel-inner {
        position: relative;
        width: 100%;
-       height: 600px ;
-       
+       height: 600px;
        overflow: hidden
 }
 
@@ -606,6 +657,7 @@ footer {
 .carousel-inner>.item>a>img,
 .carousel-inner>.item>img {
        line-height: 1;
+       min-height: 500px;
 }
 
 @media all and (transform-3d),
@@ -651,12 +703,12 @@ footer {
        display: flex;
        flex-direction: column;
        justify-content: center;
-       
+
 
 }
 
 .carousel-inner>.active {
-       left: 0
+       left: 0;
 }
 
 .carousel-inner>.next,
@@ -703,10 +755,10 @@ footer {
 }
 
 .carousel-control.left {
-       background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
-       background-image: -o-linear-gradient(left, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
-       background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .0001)));
-       background-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
+       background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .1) 0, rgba(0, 0, 0, .0001) 100%);
+       background-image: -o-linear-gradient(left, rgba(0, 0, 0, .1) 0, rgba(0, 0, 0, .0001) 100%);
+       background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .1)), to(rgba(0, 0, 0, .0001)));
+       background-image: linear-gradient(to right, rgba(0, 0, 0, .1) 0, rgba(0, 0, 0, .0001) 100%);
        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
        background-repeat: repeat-x
 }
@@ -714,10 +766,10 @@ footer {
 .carousel-control.right {
        right: 0;
        left: auto;
-       background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
-       background-image: -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
-       background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)), to(rgba(0, 0, 0, .5)));
-       background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
+       background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .1) 100%);
+       background-image: -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .1) 100%);
+       background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)), to(rgba(0, 0, 0, .1)));
+       background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .1) 100%);
        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
        background-repeat: repeat-x
 }
@@ -854,6 +906,7 @@ footer {
 
 .glyphicon {
        position: relative;
+       color: #ff874f;
        top: 1px;
        display: inline-block;
        font-family: "Glyphicons Halflings";
