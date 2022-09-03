@@ -272,6 +272,29 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+
+       .contacts {
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: center;
+                     margin-top: 100px;
+                     align-items: center;
+       
+                     .means {
+                            display: flex;       
+                            .contact-card {
+                                   font-size: smaller;
+                                   display: flex;
+                                   flex-direction: column;
+                                   align-items: center;
+       
+                                   img {
+                                          aspect-ratio: 1/1;
+                                          width: 50px !important;
+                                   }
+                            }
+                     }
+              }
        .descrizione {
               display: flex;
               flex-direction: column;
@@ -838,7 +861,7 @@ footer {
        content: "\203a"
 }
 
-.carousel-indicators {
+.carousel-indicators{
        position: absolute;
        bottom: 10px;
        left: 50%;
@@ -847,10 +870,11 @@ footer {
        padding-left: 0;
        margin-left: -30%;
        text-align: center;
-       list-style: none
+       list-style: none;
+
 }
 
-.carousel-indicators li {
+.carousel-indicators li  {
        display: inline-block;
        width: 10px;
        height: 10px;
@@ -862,12 +886,20 @@ footer {
        border: 1px solid #ff874f;
        border-radius: 10px
 }
-
+.blue li{
+border: 1px solid #0064F6;
+} 
 .carousel-indicators .active {
        width: 12px;
        height: 12px;
        margin: 0;
-       background-color: #ff874f
+       background-color: #ff874f;
+}
+.blue .active {
+       width: 12px;
+       height: 12px;
+       margin: 0;
+       background-color: #0064F6 !important;
 }
 
 .carousel-caption {
